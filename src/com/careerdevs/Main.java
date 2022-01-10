@@ -17,6 +17,13 @@ public class Main {
         System.out.println(isSameNum(2,2));
         System.out.println(calcAge(5));
         System.out.println(helloName("Gerald"));
+        //System.out.println(rev(int reversed));
+        //System.out.println(minutesToSeconds("2:00"));
+        System.out.println(makesTen(10,4));
+        System.out.println(match("apple","APPLE"));
+        System.out.println(numberSyllables("chocolate"));
+        System.out.println(hackerSpeak("hello friend"));
+
     }
 
     //Alg 1
@@ -95,14 +102,56 @@ public class Main {
     public static String helloName(String name) {
         return "Hello " + name + "!";
     }
+
+//    //Set Bonus 2; Reverse Number by using a loop in Java
+//    public static String rev(int n) {
+//        int n = 3445, reversed = 0;
+//                while (n != 0) {
+//                    int digit  = n % 10;
+//                   reversed = reversed * 10 + digit;
+//                    n /= 10;
+//                }
+//                return reversed;
+      //}
+//    //Set Bonus 3; Video length
+//    public static int minutesToSeconds(String tm) {
+//        String minutes = tm * 60;
+//
+//    }
+
+    //Alg 15                || - acts as a "or" operator
+    public static boolean makesTen(int a, int b) {
+        if (a == 10 || b == 10) {
+            return true;
+        } else if (a + b == 10) {
+            return true;
+        }
+        return false;
+    }
+
+    //Alg 16
+    public static int numberSyllables(String word) {
+            String[] syl = word.split("-");
+            return syl.length;
+        }
+
+    //Alg 17
+    public static boolean match(String str1, String str2) {
+       return str1.equalsIgnoreCase(str2);
+    }
+
+    //Alg 18
+    public static String hackerSpeak(String str) {
+        return str.replace('a','4')
+                .replace('e','3')
+                .replace('i','1')
+                .replace('o','0')
+                .replace('s','5');
+    }
+
 }
 
-//    // Example of concatenating
-//    public static String giveMeSomething2(String a) {
-//        String str1 = "Hello";
-//        String str2 = " Space World";
-//        return str1 + str2;
-//    }
+
 
 
 
